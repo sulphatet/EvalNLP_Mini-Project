@@ -1,0 +1,8 @@
+datasets==4.0.0
+transformers==4.55.2
+torch>=2.0.0
+cohere>=5.0.0
+tqdm
+scipy
+krippendorff
+pandas

@@ -1,0 +1,527 @@
+{
+  "summary": {
+    "n_examples": 50,
+    "n_with_any_failure_flag": 26,
+    "pct_with_any_failure": 0.52
+  },
+  "category_counts": {
+    "F1_fluency_dominance": 0,
+    "F2_faithfulness_blind": 3,
+    "F3_position_driven": 2,
+    "F4_reference_reversal": 2,
+    "F5_self_pref_overreach": 3,
+    "F6_cot_collapse": 22
+  },
+  "adversarial_accuracy": {
+    "fluent_incorrect": {
+      "total_evals": 15,
+      "correct": 10,
+      "accuracy": 0.667,
+      "original_first_correct": 5,
+      "original_first_n": 5,
+      "modified_first_correct": 0,
+      "modified_first_n": 5
+    },
+    "correct_awkward": {
+      "total_evals": 9,
+      "correct": 9,
+      "accuracy": 1.0
+    },
+    "meaning_shift": {
+      "total_evals": 6,
+      "correct": 6,
+      "accuracy": 1.0
+    }
+  },
+  "per_example": [
+    {
+      "example_id": "ex_001",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F2_faithfulness_blind",
+          "variant": "direct_no_ref",
+          "llm_faithfulness": 5,
+          "human_faithfulness": 4.0,
+          "gap": 1.0
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_002",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "bart",
+          "std_pick": "cohere"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_003",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_004",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_005",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_006",
+      "human_winner": "tie",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_007",
+      "human_winner": "bart",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_008",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_009",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_010",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_011",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_012",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_013",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_014",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_015",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "bart",
+          "std_pick": "cohere"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_016",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F2_faithfulness_blind",
+          "variant": "direct_no_ref",
+          "llm_faithfulness": 5,
+          "human_faithfulness": 3.667,
+          "gap": 1.333
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_017",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F3_position_driven",
+          "pair_no_ref_AB": "bart",
+          "pair_no_ref_BA": "cohere"
+        },
+        {
+          "category": "F4_reference_reversal",
+          "no_ref_pref": "bart",
+          "with_ref_pref": "cohere"
+        },
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "cohere",
+          "std_pick": "bart"
+        }
+      ],
+      "n_flags": 3
+    },
+    {
+      "example_id": "ex_018",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "bart",
+          "std_pick": "cohere"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_019",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F5_self_pref_overreach",
+          "pair_pick": "cohere",
+          "rubric_pick": "bart",
+          "human_pick": "bart"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_020",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_021",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F5_self_pref_overreach",
+          "pair_pick": "cohere",
+          "rubric_pick": "bart",
+          "human_pick": "bart"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_022",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_023",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "bart",
+          "std_pick": "cohere"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_024",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_025",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_026",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F5_self_pref_overreach",
+          "pair_pick": "cohere",
+          "rubric_pick": "bart",
+          "human_pick": "bart"
+        },
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 2
+    },
+    {
+      "example_id": "ex_027",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F3_position_driven",
+          "pair_no_ref_AB": "bart",
+          "pair_no_ref_BA": "cohere"
+        },
+        {
+          "category": "F4_reference_reversal",
+          "no_ref_pref": "bart",
+          "with_ref_pref": "cohere"
+        },
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "cohere",
+          "std_pick": "bart"
+        }
+      ],
+      "n_flags": 3
+    },
+    {
+      "example_id": "ex_028",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "bart",
+          "std_pick": "cohere"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_029",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F2_faithfulness_blind",
+          "variant": "direct_no_ref",
+          "llm_faithfulness": 5,
+          "human_faithfulness": 4.0,
+          "gap": 1.0
+        },
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 2
+    },
+    {
+      "example_id": "ex_030",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_031",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_032",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_033",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_034",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_035",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "contradicts_standard",
+          "cot_pick": "bart",
+          "std_pick": "cohere"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_036",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_037",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_038",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_039",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_040",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_041",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_042",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_043",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_044",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_045",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_046",
+      "human_winner": "cohere",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_047",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_048",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    },
+    {
+      "example_id": "ex_049",
+      "human_winner": "cohere",
+      "flags": [],
+      "n_flags": 0
+    },
+    {
+      "example_id": "ex_050",
+      "human_winner": "bart",
+      "flags": [
+        {
+          "category": "F6_cot_collapse",
+          "reason": "parse_error"
+        }
+      ],
+      "n_flags": 1
+    }
+  ]
+}

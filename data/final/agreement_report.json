@@ -1,0 +1,14 @@
+{
+  "faithfulness_A": -0.0645,
+  "coverage_A": 0.2448,
+  "fluency_A": 0.061,
+  "faithfulness_B": 0.1212,
+  "coverage_B": 0.2242,
+  "fluency_B": 0.0957,
+  "preference_pairwise_agreement": {
+    "Piyush_vs_Sakhil Taneja": 0.6,
+    "Piyush_vs_Affan": 0.5,
+    "Sakhil Taneja_vs_Affan": 0.66
+  },
+  "preference_mean_agreement": 0.5867
+}

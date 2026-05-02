@@ -1,0 +1,202 @@
+{
+  "ex_001": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_002": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_003": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_004": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_005": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_006": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_007": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_008": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_009": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_010": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_011": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_012": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_013": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_014": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_015": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_016": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_017": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_018": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_019": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_020": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_021": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_022": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_023": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_024": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_025": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_026": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_027": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_028": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_029": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_030": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_031": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_032": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_033": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_034": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_035": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_036": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_037": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_038": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_039": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_040": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_041": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_042": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_043": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_044": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_045": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_046": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_047": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_048": {
+    "A": "bart",
+    "B": "cohere"
+  },
+  "ex_049": {
+    "A": "cohere",
+    "B": "bart"
+  },
+  "ex_050": {
+    "A": "bart",
+    "B": "cohere"
+  }
+}

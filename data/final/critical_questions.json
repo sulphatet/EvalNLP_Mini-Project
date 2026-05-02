@@ -1,0 +1,95 @@
+{
+  "Q1_reliability": {
+    "direct_scoring_spearman": {
+      "faithfulness": 0.4159,
+      "coverage": 0.4622,
+      "fluency": 0.3451
+    },
+    "rubric_with_ref_coverage_spearman": 0.5911,
+    "pairwise_agreement_range": [
+      0.76,
+      0.8
+    ],
+    "human_inter_annotator_alpha": {},
+    "interpretation": "LLM judge shows moderate correlation with humans on faithfulness (\u03c1=0.4159) and coverage (\u03c1=0.4622), but weak on fluency (\u03c1=0.3451) without a reference. Pairwise mode achieves 80% agreement with human preference \u2014 comparable to inter-annotator agreement (see \u03b1 values above)."
+  },
+  "Q2_failure_modes": {
+    "category_counts_over_50_examples": {
+      "F1_fluency_dominance": 0,
+      "F2_faithfulness_blind": 3,
+      "F3_position_driven": 2,
+      "F4_reference_reversal": 2,
+      "F5_self_pref_overreach": 3,
+      "F6_cot_collapse": 22
+    },
+    "dominant_failure": "F6_cot_collapse",
+    "cot_parse_failure_rate": 0.26,
+    "adversarial_accuracy": {
+      "fluent_incorrect": {
+        "total_evals": 15,
+        "correct": 10,
+        "accuracy": 0.667,
+        "original_first_correct": 5,
+        "original_first_n": 5,
+        "modified_first_correct": 0,
+        "modified_first_n": 5
+      },
+      "correct_awkward": {
+        "total_evals": 9,
+        "correct": 9,
+        "accuracy": 1.0
+      },
+      "meaning_shift": {
+        "total_evals": 6,
+        "correct": 6,
+        "accuracy": 1.0
+      }
+    },
+    "position_driven_fluent_incorrect": {
+      "original_first_accuracy": 1.0,
+      "modified_first_accuracy": 0.0
+    },
+    "interpretation": "The dominant failure mode is CoT collapse: 22/50 examples where CoT either fails to parse (26 cases) or contradicts the non-CoT verdict. Faithfulness blindness (F2) affects 3/50 examples \u2014 the LLM assigns faithfulness=5 to summaries humans rated \u22644. Self-preference overreach (F5) occurs in 3/50 cases. Adversarial testing reveals a critical position-driven failure: the judge is 100% accurate on fluent+incorrect summaries when the correct summary appears first, but 0% accurate when the incorrect summary leads."
+  },
+  "Q3_reference_effect": {
+    "pairwise_agreement_no_ref": 0.76,
+    "pairwise_agreement_with_ref": 0.8,
+    "direct_faithfulness_score_delta_with_ref": 0.15,
+    "direct_coverage_delta_with_ref": -0.11,
+    "fluency_spearman_no_ref": 0.3451,
+    "fluency_spearman_with_ref": 0.0072,
+    "position_bias_no_ref_conflict_rate": 0.04,
+    "position_bias_with_ref_conflict_rate": 0.0,
+    "interpretation": "Adding the source article does not uniformly improve reliability. Pairwise agreement stays flat (76% \u2192 80%). Faithfulness scores rise slightly (+0.15) but this inflates scores rather than improving calibration. Most strikingly, fluency correlation collapses when the article is present (\u03c1=0.3451 \u2192 \u03c1=0.0072), suggesting the model attends to the article at the expense of the summary's surface quality. The one clear benefit: position bias (conflict rate) drops from 4% to 0% with a reference."
+  },
+  "Q4_bias": {
+    "position_bias": {
+      "no_ref_conflict_rate": 0.04,
+      "with_ref_conflict_rate": 0.0,
+      "no_ref_first_position_pref_rate": 0.52
+    },
+    "self_preference": {
+      "human_cohere_preference_rate": 0.8,
+      "pairwise_no_ref_cohere_rate": 0.96,
+      "pairwise_with_ref_cohere_rate": 1.0,
+      "rubric_no_ref_cohere_rate": 0.58,
+      "pairwise_vs_human_delta": 0.16
+    },
+    "adversarial_position_evidence": {
+      "fluent_incorrect_orig_first_acc": 1.0,
+      "fluent_incorrect_mod_first_acc": 0.0
+    },
+    "interpretation": "Position bias is detectable but mild in standard pairwise evaluation (no_ref conflict rate: 4%). It is eliminated entirely with a reference (0% conflict rate). Self-preference is the stronger bias: the LLM (Cohere) selects its own output in pairwise mode 96% of the time vs 80% for humans (+16% gap). Rubric mode attenuates this: only 58% Cohere preference. Adversarial tests provide the clearest position evidence: when the hallucinated summary is placed first, the judge picks it 5/5 times, a complete reversal from when it is placed second (0/5 correct)."
+  },
+  "Q5_cot": {
+    "cot_parse_failure_rate": 0.26,
+    "cot_pairwise_agreement_with_human": 0.7222,
+    "std_pairwise_agreement_no_ref": 0.76,
+    "cot_vs_std_conflict_rate": 0.3214,
+    "std_conflict_rate_for_comparison": 0.04,
+    "conflict_rate_delta": 0.2814,
+    "cot_valid_pairs": 28,
+    "std_valid_pairs": 50,
+    "interpretation": "Chain-of-thought reasoning degrades reliability in our setting. 26% of CoT calls fail to parse (max_tokens exhausted before FINAL: marker). Among valid CoT responses, human agreement is 72.2% vs 76% for standard pairwise \u2014 marginally lower. Critically, the CoT conflict rate is 32% vs 4% for standard (\u0394=+28%), meaning CoT reasoning introduces internal inconsistency rather than resolving it. This contradicts findings in Wei et al. (2022) and may reflect that CoT benefits depend on sufficient reasoning space \u2014 our 300-token budget is too tight for meaningful deliberation."
+  }
+}
